@@ -1,4 +1,4 @@
- 
+'''
 # 1 manager son price
 
 manager_son_price=lambda price, is_manager_son : price-price/100*20 if is_manager_son else price+price/100*17
@@ -65,4 +65,36 @@ print(ticket_price(10, False))
 print(ticket_price(20, True))
 print(ticket_price(20, False))
 
+### self learn ###
 
+# A. sort number normally
+
+numbers = [5, 2, 9, 1, 7]
+numbers.sort()
+print(numbers)
+'''
+# B. sort tuples by second value
+
+students = [("Dana", 85),("Eli", 92),("Noa", 78)]
+print(sorted(students,key=lambda x:x[1]))
+
+# C. sort sictionaries by one field
+
+students = [
+    {"name": "Dana", "grade": 85},
+    {"name": "Eli", "grade": 92},
+    {"name": "Noa", "grade": 78}
+]
+print(sorted(students,key=lambda x:x["grade"]))
+
+# D. sort divtionaries by calculated value
+
+products = [
+    {"name": "Pen", "price": 5, "amount": 10},
+    {"name": "Book", "price": 40, "amount": 2},
+    {"name": "Bag", "price": 80, "amount": 1}
+]
+total_price_l=sorted(products,key=lambda n:n["price"]*n["amount"])
+print(total_price_l)
+
+# E. 
